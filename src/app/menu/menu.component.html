@@ -1,0 +1,15 @@
+<nav class="custom-nav">
+    <header class='custom-header'>
+        <a href="javascript:void(0)" class="menu-icon" (click)="toggleMenuSection()"><i class="fa fa-bars"></i></a>
+        <h1>MyEventz</h1>
+        <ul [ngClass]="{'show-menu': showMenu}" class="" (click)="toggleMenuSection()">
+          <li><a href="#wedding">Wedding</a></li>
+          <li><a href="#birthday">Birthday</a></li>
+          <li><a href="#cparties">College Parties</a></li>
+          <li><a href="#corporate">Corporate</a></li>
+          <li><a href="#commercial">Commercial</a></li>
+          <li><a href="#personal">Personal</a></li>
+          <li><a href="#contact">About Us</a></li>
+        </ul>
+    </header>   
+  </nav>

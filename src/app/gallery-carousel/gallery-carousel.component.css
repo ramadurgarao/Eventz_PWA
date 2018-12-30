@@ -1,0 +1,33 @@
+.comments-outer {
+    position: relative;
+    min-height: 100px;
+    overflow-x: hidden;
+}
+.comment {
+    position: absolute;    
+    top: 0;
+    display: none;
+    transition: all 1s;    
+    left: 100%;
+    width: 100%;
+    background-color: #fdf390;
+    padding: 4%;
+    border-radius: 5px;
+}
+.comment.current {
+    left: 0;
+}
+.comment.active {
+    display: block;  
+}
+.comment.prev {
+    left: -100%;
+}
+.comment.next {
+    left: 100%;
+}
+.comments-outer::after {
+    clear: both;
+    content: '';
+    display: block;
+}
