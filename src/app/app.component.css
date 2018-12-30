@@ -1,0 +1,92 @@
+.my-eventz img {
+    max-width: 100%;
+}
+.content-info section {
+    padding-top: 5em;
+}
+#cust-contact-no, #callme {
+    padding: 5px;
+    margin-left: 5px;
+}
+footer {
+    text-align: center;
+    padding-top: 5%;
+    background-color: brown;
+    color: white;
+}
+footer section a {
+    font-size: 2.5em;
+    margin-left: 0.2em;
+    color: white;
+}
+.aboutus-content {
+    padding-top: 0px;
+    padding-bottom: 80px;
+    text-align: center;
+    color: brown;
+    font-size: 16px;
+}
+.event-card {
+    width: 100%;
+}
+.event-card:after {
+    clear: both;
+    content:'';
+    display: block;
+}
+.event-info {
+    width: 100%;
+    float: left;
+    padding: 2%;
+}
+.event-gallery {
+    width: 100%;
+    float: left;
+    padding: 1%;
+}
+.event-gallery img {
+    border-radius: 5px;
+    max-width: 100%;
+    height: auto;   
+}
+.event-card::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+.event-info-generic h3, .event-info-generic p {
+    margin: 0;
+}
+.event-info-generic p {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.event-info-cfeed {
+    padding: 5%;
+}
+.blockquote span {
+    float: right;
+}
+.blockquote:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+#contact {
+    font-size: 1.6em;
+}
+#contact p {
+    font-size: 1em;
+}
+@media screen and (min-width: 720px) {
+    .event-info, .event-gallery {
+        width: 50%;
+    }
+    #contact p {
+        font-size: 1.8em;
+    }
+    .aboutus-content {
+        padding-top: 100px;
+        padding-bottom: 120px;
+    }
+}

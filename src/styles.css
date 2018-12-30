@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    font-family: Arial,sans-serif;
+    color: brown;
+}
+.custom-btn {
+    background-color: #fff;
+    border: 2px solid brown;
+    border-radius: 5px;
+    padding: 8px;
+    font-weight: bold;
+}
+.custom-input {
+    border: 1px solid brown;
+    border-radius: 5px;
+}
+.custom-slick-prev {
+    left: 0;
+    width: 10%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index:1;
+}
+.custom-slick-next {
+    z-index: 1;
+    right: 0;
+    width: 10%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+}

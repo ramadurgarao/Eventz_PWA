@@ -1,21 +1,253 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
-<router-outlet></router-outlet>
+<section class="container-fluid my-eventz">
+  <app-menu></app-menu>
+  <div class="content-info">
+    <section id="contact">
+        <div class="aboutus-content">
+            <p>Everyone wants to spend a time with family and friends to share our happiness. We make those events very memorable.</p>
+            <button class="custom-btn" *ngIf="!contactDetails" id="quatation" (click)="contactDetails = true">Contact Us</button>
+            <ng-container *ngIf="contactDetails">
+                <p>We are just a call away. You can contact us at 99999-99999 or known@gmail.com </p>
+                <p>You want a callback, please provide your number here..</p>
+                <input type="tel" class="custom-input" id="cust-contact-no"/> 
+                <button class="custom-btn" id="callme">Call me</button>
+            </ng-container>  
+        </div>          
+           
+    </section>
+    <section id="wedding">
+      <div class="event-card">
+        <div class='event-info'>
+            <div class='event-info-generic'> 
+                <h3 class='event-info-heading'>Wedding</h3>
+                <p class='event-info-desc'>we handle normal and destination wedding</p>
+            </div>            
+            <div class='event-info-cfeed'>
+                <app-comment-gallary>
+                  <div class='blockquote'>
+                      <p>Comment1 comment Comment comment Comment comment Comment comment Comment comment Comment comment1 </p>
+                      <span>--Person</span>
+                  </div>
+                  <div class='blockquote'>
+                      <p>Comment2 comment Comment comment Comment comment Comment comment Comment comment Comment comment2 </p>
+                      <span>--Person</span>
+                  </div>
+                  <div class='blockquote'>
+                      <p>Comment3 comment Comment comment Comment comment Comment comment Comment comment Comment comment3 </p>
+                      <span>--Person</span>  
+                  </div>
+                  <div class='blockquote'>
+                      <p>Comment4 comment Comment comment Comment comment Comment comment Comment comment Comment comment4 </p>
+                      <span>--Person</span>
+                  </div>
+                </app-comment-gallary>
+            </div>
+        </div>  
+        <div class='event-gallery'>
+            <app-image-gallery>
+              <img src="assets/wedding.jpg"/>
+              <img src="assets/wedding.jpg"/>  
+              <img src="assets/wedding.jpg"/>
+            </app-image-gallery>             
+        </div> 
+      </div>           
+    </section>
+    <section id="birthday">
+      <div class="event-card">           
+          <div class='event-gallery'>
+              <app-image-gallery>
+                  <img src="assets/birthday.jpg" />
+                  <img src="assets/birthday.jpg" />
+                  <img src="assets/birthday.jpg" />
+              </app-image-gallery>               
+          </div>
+          <div class='event-info'>
+              <div class='event-info-generic'> 
+                  <h3 class='event-info-heading'>Birthday</h3>
+                  <p class='event-info-desc'>we handle normal and destination wedding</p>
+              </div>            
+              <div class='event-info-cfeed'>
+                  <app-comment-gallary>
+                    <div class='blockquote'>
+                        <p>Comment1 comment Comment comment Comment comment Comment comment Comment comment Comment comment1 </p>
+                        <span>--Person</span>
+                    </div>
+                    <div class='blockquote'>
+                        <p>Comment2 comment Comment comment Comment comment Comment comment Comment comment Comment comment2 </p>
+                        <span>--Person</span>
+                    </div>
+                    <div class='blockquote'>
+                        <p>Comment3 comment Comment comment Comment comment Comment comment Comment comment Comment comment3 </p>
+                        <span>--Person</span>  
+                    </div>
+                    <div class='blockquote'>
+                        <p>Comment4 comment Comment comment Comment comment Comment comment Comment comment Comment comment4 </p>
+                        <span>--Person</span>
+                    </div>
+                  </app-comment-gallary>
+              </div>
+          </div>  
+      </div>
+    </section>
+    <section id="cparties">
+      <div class="event-card">          
+          <div class='event-info'>
+              <div class='event-info-generic'> 
+                  <h3 class='event-info-heading'>College Parties</h3>
+                  <p class='event-info-desc'>we handle normal and destination wedding</p>
+              </div>            
+              <div class='event-info-cfeed'>
+                  <app-comment-gallary>
+                    <div class='blockquote'>
+                        <p>Comment1 comment Comment comment Comment comment Comment comment Comment comment Comment comment1 </p>
+                        <span>--Person</span>
+                    </div>
+                    <div class='blockquote'>
+                        <p>Comment2 comment Comment comment Comment comment Comment comment Comment comment Comment comment2 </p>
+                        <span>--Person</span>
+                    </div>
+                    <div class='blockquote'>
+                        <p>Comment3 comment Comment comment Comment comment Comment comment Comment comment Comment comment3 </p>
+                        <span>--Person</span>  
+                    </div>
+                    <div class='blockquote'>
+                        <p>Comment4 comment Comment comment Comment comment Comment comment Comment comment Comment comment4 </p>
+                        <span>--Person</span>
+                    </div>
+                  </app-comment-gallary>
+              </div>
+          </div>  
+          <div class='event-gallery'>              
+              <app-image-gallery>
+                  <img src="assets/cparties.jpg" />
+                  <img src="assets/cparties.jpg" />
+                  <img src="assets/cparties.jpg" />
+              </app-image-gallery>   
+         </div>
+      </div>
+    </section>
+    <section id="corporate">
+      <div class="event-card">      
+          <div class='event-gallery'>              
+              <app-image-gallery>
+                  <img src="assets/corporate.jpg" />
+                  <img src="assets/corporate.jpg" />
+                  <img src="assets/corporate.jpg" />
+              </app-image-gallery> 
+          </div>    
+          <div class='event-info'>
+              <div class='event-info-generic'> 
+                  <h3 class='event-info-heading'>Corporate</h3>
+                  <p class='event-info-desc'>we handle normal and destination wedding</p>
+              </div>            
+              <div class='event-info-cfeed'>
+                  <app-comment-gallary>
+                    <div class='blockquote'>
+                        <p>Comment1 comment Comment comment Comment comment Comment comment Comment comment Comment comment1 </p>
+                        <span>--Person</span>
+                    </div>
+                    <div class='blockquote'>
+                        <p>Comment2 comment Comment comment Comment comment Comment comment Comment comment Comment comment2 </p>
+                        <span>--Person</span>
+                    </div>
+                    <div class='blockquote'>
+                        <p>Comment3 comment Comment comment Comment comment Comment comment Comment comment Comment comment3 </p>
+                        <span>--Person</span>  
+                    </div>
+                    <div class='blockquote'>
+                        <p>Comment4 comment Comment comment Comment comment Comment comment Comment comment Comment comment4 </p>
+                        <span>--Person</span>
+                    </div>
+                  </app-comment-gallary>
+              </div>
+          </div> 
+      </div>
+    </section>
+    <section id="commercial">
+      <div class="event-card">          
+          <div class='event-info'>
+              <div class='event-info-generic'> 
+                  <h3 class='event-info-heading'>Commercial</h3>
+                  <p class='event-info-desc'>we handle normal and destination wedding</p>
+              </div>            
+              <div class='event-info-cfeed'>
+                  <app-comment-gallary>
+                    <div class='blockquote'>
+                        <p>Comment1 comment Comment comment Comment comment Comment comment Comment comment Comment comment1 </p>
+                        <span>--Person</span>
+                    </div>
+                    <div class='blockquote'>
+                        <p>Comment2 comment Comment comment Comment comment Comment comment Comment comment Comment comment2 </p>
+                        <span>--Person</span>
+                    </div>
+                    <div class='blockquote'>
+                        <p>Comment3 comment Comment comment Comment comment Comment comment Comment comment Comment comment3 </p>
+                        <span>--Person</span>  
+                    </div>
+                    <div class='blockquote'>
+                        <p>Comment4 comment Comment comment Comment comment Comment comment Comment comment Comment comment4 </p>
+                        <span>--Person</span>
+                    </div>
+                  </app-comment-gallary>
+              </div>
+          </div>  
+          <div class='event-gallery'>              
+              <app-image-gallery>
+                  <img src="assets/commercial.png" />
+                  <img src="assets/commercial.png" />
+                  <img src="assets/commercial.png" />
+              </app-image-gallery> 
+         </div>
+      </div>
+    </section>
+    <section id="personal">
+      <div class="event-card">  
+          <div class='event-gallery'>              
+              <app-image-gallery>
+                  <img src="assets/personal.jpg" />
+                  <img src="assets/personal.jpg" />
+                  <img src="assets/personal.jpg" />
+              </app-image-gallery> 
+          </div>        
+          <div class='event-info'>
+              <div class='event-info-generic'> 
+                  <h3 class='event-info-heading'>Personal</h3>
+                  <p class='event-info-desc'>we handle normal and destination wedding</p>
+              </div>            
+              <div class='event-info-cfeed'>
+                  <app-comment-gallary>
+                    <div class='blockquote'>
+                        <p>Comment1 comment Comment comment Comment comment Comment comment Comment comment Comment comment1 </p>
+                        <span>--Person</span>
+                    </div>
+                    <div class='blockquote'>
+                        <p>Comment2 comment Comment comment Comment comment Comment comment Comment comment Comment comment2 </p>
+                        <span>--Person</span>
+                    </div>
+                    <div class='blockquote'>
+                        <p>Comment3 comment Comment comment Comment comment Comment comment Comment comment Comment comment3 </p>
+                        <span>--Person</span>  
+                    </div>
+                    <div class='blockquote'>
+                        <p>Comment4 comment Comment comment Comment comment Comment comment Comment comment Comment comment4 </p>
+                        <span>--Person</span>
+                    </div>
+                  </app-comment-gallary>
+              </div>
+          </div> 
+      </div>
+    </section>
+    
+  </div>
+  <footer>
+    <section>
+      Follow us on
+      <a href="https://www.facebook.com" target="_blank"
+        ><i class="fa fa-facebook-square"></i
+      ></a>
+      <a href="https://www.twitter.com" target="_blank"
+        ><i class="fa fa-twitter"></i
+      ></a>
+    </section>
+    &copy;tickitsolutions.com@2019
+  </footer>
+</section>
